@@ -1,0 +1,256 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --color-cagette: #ded1c1;
+  --color-light: #fafafa;
+}
+@supports (font: -apple-system-body) and (-webkit-appearance: none) {
+  img[loading='lazy'] {
+    clip-path: inset(0.6px);
+  }
+}
+html {
+  font-family: 'Rubik', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap');
+.bg-footer {
+  background: url('https://cdn.shopify.com/s/files/1/0762/8763/9861/files/footer.webp?v=1683883719')
+    no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.input-transition {
+  position: absolute;
+  right: 0;
+  transition: all 0.5s ease-in-out;
+  width: 80px;
+  z-index: 1;
+}
+
+.input-transition:hover,
+.input-transition:focus {
+  width: 250px;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #704242;
+  font-family: 'Rubik', sans-serif;
+}
+a {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent !important;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sectionpara {
+  background-position: center !important;
+  background-size: cover !important;
+
+  background-repeat: no-repeat !important;
+  min-height: 100vh;
+}
+
+.section2restau {
+  background-image: url('https://cdn.shopify.com/s/files/1/0762/8763/9861/files/home-parallax-2.webp?v=1685354625');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 55vh;
+}
+.bg-deli {
+  background-image: url('https://cdn.shopify.com/s/files/1/0762/8763/9861/files/deli-bg.webp?v=1685427815');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 55vh;
+}
+.bg-eshop {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 40vh;
+  width: 100%;
+}
+
+.overlay-eshop {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-eshop::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95); /* Adjust the opacity here */
+}
+.no-gap {
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .section2restau {
+    background-image: url('https://cdn.shopify.com/s/files/1/0762/8763/9861/files/home-parallax-2.webp?v=1685354625');
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }
+  .bg-deli {
+    background-image: url('https://cdn.shopify.com/s/files/1/0762/8763/9861/files/deli-bg.webp?v=1685427815');
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+  }
+  .bgimg-1 {
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #704242 !important;
+}
+.swiper-button-next {
+  color: #704242 !important;
+}
+.swiper-button-prev {
+  color: #704242 !important;
+}
+.swiper-slide {
+  background: none !important;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.carousel .animate-carousel {
+  animation: marquee 10s linear infinite; /* Adjust the seconds as per your need */
+}
+.slider-control-bottomcenter button {
+  background: white !important;
+  border-radius: 50%;
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.slider-control-bottomcenter svg {
+  display: none !important;
+}
+
+.slider-control-bottomcenter li {
+  margin-right: 15px;
+}
+
+.slider-control-centerright {
+  display: none !important;
+}
+
+.slider-control-centerleft {
+  display: none !important;
+}
+
+.slider-control-bottomcenter .active button {
+  width: 15px !important;
+  height: 15px !important;
+  transform: scale(1.3);
+}
+
+.paging-item button {
+  opacity: 1 !important;
+}
+
+.bgimg-1 {
+  background-image: url('https://cdn.shopify.com/s/files/1/0762/8763/9861/files/Landing-page-scaled.webp?v=1693561138');
+  min-height: 100%;
+  background-color: black;
+  background-position-x: 21%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.bgimg-2 {
+  background-image: url('https://cdn.shopify.com/s/files/1/0762/8763/9861/files/restaurant-header.webp?v=1685069801');
+
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+}
+
+.bgimg-3 {
+  background-image: url('https://cdn.shopify.com/s/files/1/0762/8763/9861/files/home-parallax-3.webp?v=1685354625');
+
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+}
+
+.bgimg-4 {
+  background-image: url('https://cdn.shopify.com/s/files/1/0762/8763/9861/files/A-place-to-shop_-The-Deli-Wine-Cellar-scaled.webp?v=1687749054');
+
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+}
+.bgimg-5 {
+  background-image: url('https://cdn.shopify.com/s/files/1/0762/8763/9861/files/home-parallax-4.webp?v=1685354625');
+
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+}
+.shade {
+  text-shadow: 1px 1px 7px black;
+}
+@media (max-width: 900px) {
+  .bgimg-5 {
+    background-image: url('https://cdn.shopify.com/s/files/1/0762/8763/9861/files/home-parallax-4.webp?v=1685354625');
+
+    background-color: black;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+  }
+}

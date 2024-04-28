@@ -1,0 +1,106 @@
+'use client';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import Image from 'next/image';
+import { Autoplay, Navigation, Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+export function RestauSliderOffer() {
+  return (
+    <>
+      <Swiper
+        loop={true}
+        speed={2200}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false
+        }}
+        spaceBetween={10}
+        pagination={{
+          clickable: true
+        }}
+        navigation={true}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 50
+          }
+        }}
+        modules={[Autoplay, Pagination, Navigation]}
+      >
+        <SwiperSlide>
+          <Image
+            src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/Monday.webp?v=1684981095"
+            alt="monday menu"
+            className="w-full object-cover"
+            width={1080}
+            height={1080}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/Tuesday.webp?v=1684981095"
+            alt="Tuesday menu"
+            className="w-full object-cover"
+            width={1080}
+            height={1080}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/Wednesday.webp?v=1684981095"
+            alt="Wednesday menu"
+            className="w-full object-cover"
+            width={1080}
+            height={1080}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/Thursday.webp?v=1684981095"
+            alt="Thursday menu"
+            className="w-full object-cover"
+            width={1080}
+            height={1080}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/Friday.webp?v=1684981095"
+            alt="Friday menu"
+            className="w-full object-cover"
+            width={1080}
+            height={1080}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/Saturday.webp?v=1684981095"
+            alt="Saturday menu"
+            className="w-full object-cover"
+            width={1080}
+            height={1080}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/7.webp?v=1684981096"
+            alt="Sunday menu"
+            className="w-full object-cover"
+            width={1080}
+            height={1080}
+          />
+        </SwiperSlide>
+      </Swiper>
+    </>
+  );
+}
