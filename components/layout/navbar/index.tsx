@@ -161,6 +161,7 @@ export default async function Navbar() {
               {/* @ts-expect-error Server Component */}
               <Cart />
             </Suspense>
+            
           </div>
         </div>
       </div>

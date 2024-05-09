@@ -5,9 +5,25 @@ import { submit } from 'lib/react/submit';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 
 export default function SigninPage() {
+  const [firstName, setFirstName] = useState<string | null>(null);
+  useEffect(() => {
+    // Check if localStorage is available (i.e., if the code is running in the browser)
+    if (typeof localStorage !== 'undefined') {
+      const userDataString = localStorage.getItem('userData');
+      if (userDataString) {
+        // Parse the JSON string to get the object
+        const userData = JSON.parse(userDataString);
+        const firstName = userData?.data?.customer?.firstName;
+
+        // Now you can use the firstName variable as needed
+        console.log("firstName", firstName);
+        setFirstName(firstName); // Optionally set the firstName state if you need to use it in rendering
+      }
+    }
+  }, []);
   const router = useRouter();
   const [error, setError] = useState<string | undefined>();
   async function onSubmit(ev: FormEvent<HTMLFormElement>) {

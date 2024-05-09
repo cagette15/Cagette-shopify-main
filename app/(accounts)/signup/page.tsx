@@ -59,13 +59,16 @@ export default function SignupPage() {
     });
 
     if (res.ok) {
+      const data = await res.json();
+  // Store the data in local storage
+  localStorage.setItem('userData', JSON.stringify(data));
       router.push('/signin');
     } else {
       const data = await res?.json();
       setError(data.errors[0]?.message || 'An error occurred');
     }
 
-    /*type SubmitFn = (data: {
+   type SubmitFn = (data: {
       firstName: string;
       lastName: string;
       email: string;
@@ -74,14 +77,13 @@ export default function SignupPage() {
     }) => Promise<any>;
     const submit: SubmitFn = async (data) => {
       const res = await submit(parsed.data);
-
       if (res.success) {
         router.push('/signin');
       } else {
         console.log(res.errors);
         setError(res.errors[0]?.message || 'An error occurred');
       }
-    };*/
+    };
   }
 
   function clearError() {
