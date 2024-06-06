@@ -1,9 +1,8 @@
 import { getShopifyToken } from 'lib/next/session';
 import { getCustomer } from 'lib/shopify';
 import { redirect } from 'next/navigation';
-import AccountUpdateForm from './account-update-form';
 
-import CustomerUpdateForm from './update-form';
+import CustomerAccountDetails from './customer-account-details';
 
 export default async function AccountPage() {
   const accessToken = getShopifyToken();
@@ -16,7 +15,8 @@ export default async function AccountPage() {
 
   return (
     <main>
-      <AccountUpdateForm customerInfo={customerInfo!} />
+      {/* <AccountUpdateForm customerInfo={customerInfo!} /> */}
+      <CustomerAccountDetails  customerInfos={customerInfo!} />
       {/*<h1>server side</h1>
       <pre title="debug">
         <code>{JSON.stringify({ customerInfos }, null, 2)}</code>

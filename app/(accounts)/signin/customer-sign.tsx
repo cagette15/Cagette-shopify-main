@@ -1,27 +1,46 @@
 'use client';
-
-import type { SignoutApiEndpoint } from 'app/api/accounts/signout/route';
+import type { SigninApiEndpoint } from 'app/api/accounts/signin/route';
 import { submit } from 'lib/react/submit';
 import Image from 'next/image';
-// import { redirect } from 'next/navigation';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { FormEvent } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 
-export default function SignoutPage() {
+export default function Signin() {
+  const [firstName, setFirstName] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Check if localStorage is available (i.e., if the code is running in the browser)
+    if (typeof localStorage !== 'undefined') {
+      const userDataString = localStorage.getItem('userData');
+      if (userDataString) {
+        // Parse the JSON string to get the object
+        const userData = JSON.parse(userDataString);
+        const firstName = userData?.data?.customer?.firstName;
+
+        // Now you can use the firstName variable as needed
+        console.log("firstName", firstName);
+        setFirstName(firstName); // Optionally set the firstName state if you need to use it in rendering
+      }
+    }
+  }, []);
   const router = useRouter();
+  const [error, setError] = useState<string | undefined>();
   async function onSubmit(ev: FormEvent<HTMLFormElement>) {
     ev.preventDefault();
-    const res = await submit<SignoutApiEndpoint>(ev.currentTarget);
+    const res = await submit<SigninApiEndpoint>(ev.currentTarget);
 
     if (res.success) {
-      localStorage.setItem('userData', '');
-      // redirect('/');
-      router.push('/');
+      router.push('/account');
     } else {
       console.log(res.errors);
+      setError(res.errors[0]?.message || 'An error occurred');
     }
   }
 
+  function clearError() {
+    setError(undefined);
+  }
   return (
     <section className="flex items-stretch text-white md:min-h-[90vh] ">
       <div
@@ -97,16 +116,44 @@ export default function SignoutPage() {
 
           <form
             method="post"
-            action="/api/accounts/signout"
+            action="/api/accounts/signin"
             onSubmit={onSubmit}
-            className="mx-auto w-full px-4 sm:w-2/3 lg:px-0"
+            className="mx-auto w-full px-4  sm:w-2/3 lg:px-0"
           >
+            <div className="pb-2 pt-4">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                className="block w-full rounded-sm bg-gray-200 p-4 text-lg text-gray-800"
+                onFocus={clearError}
+              />
+            </div>
+            <div className="pb-2 pt-4">
+              <input
+                className="block w-full rounded-sm bg-gray-200 p-4 text-lg text-gray-800"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+                onFocus={clearError}
+              />
+            </div>
+            <div className="flex justify-between px-4 py-2  font-medium text-gray-100 hover:text-[#95112c] md:text-gray-600">
+              <div>
+                <Link href="/signup">Sign Up</Link>
+              </div>
+              <div>
+                <Link href="/recover-password">Forgot password?</Link>
+              </div>
+            </div>
             <div className="px-4 pb-2 pt-4">
               <button
                 className="focus:ring--[#95112c] mb-2 mr-2 w-full rounded-full bg-second px-5 py-2.5 text-center text-base font-medium text-white hover:bg-[#95112c] focus:outline-none focus:ring-4 md:py-4"
                 type="submit"
               >
-                Sign Out
+                sign in
               </button>
             </div>
 
@@ -145,6 +192,9 @@ export default function SignoutPage() {
                 </svg>
               </a>
             </div>
+            {error && (
+              <div className="mt-2 text-base font-medium uppercase text-[#95112c]">{error}</div>
+            )}
           </form>
         </div>
       </div>
