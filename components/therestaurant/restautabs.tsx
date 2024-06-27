@@ -9,7 +9,7 @@ export function RestauTabs() {
       <div className="section2restau bg-dark/40 py-12 md:py-20">
         <div className="container mx-auto text-center">
           <h1 className="pt-[32vh] text-center text-3xl font-bold text-white  drop-shadow-[0_35px_35px_rgba(0,0,0,0.65)] md:pt-[12vh] md:text-6xl ">
-            Test title
+          The Restaurant 
           </h1>
           <p className="g px-14 pt-[5vh] text-center  text-lg text-white drop-shadow-[35px_35px_35px_rgba(0,0,0,0.65)] md:text-2xl">
             Indulge yourself in the spirit of a Parisian bistro with a natural scenery! <br />
@@ -90,7 +90,8 @@ export function RestauTabs() {
               <div className="grid grid-cols-1  py-6 md:grid-cols-2 md:px-20 md:py-12">
                 <div className="">
                   <Image
-                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/sl.webp?v=1684922024"
+                    // src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/sl.webp?v=1684922024"
+                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/1_ef6d3a9b-c3c9-4acf-b377-6e20dac39948.png?v=1719430584"
                     className="h-full object-contain md:px-4"
                     width={1920}
                     height={940}
@@ -99,7 +100,8 @@ export function RestauTabs() {
                 </div>
                 <div className="">
                   <Image
-                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/LUNCH-MENU_MAY_2.webp?v=1684922023"
+                    // src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/LUNCH-MENU_MAY_2.webp?v=1684922023"
+                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/2.png?v=1719430188"
                     className="h-full object-contain md:px-4"
                     width={1920}
                     height={940}
@@ -120,7 +122,8 @@ export function RestauTabs() {
               <div className="grid grid-cols-1 py-6 md:grid-cols-2 md:px-20 md:py-12">
                 <div className="grid">
                   <Image
-                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/sl.webp?v=1684922024"
+                    // src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/sl.webp?v=1684922024"
+                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/3_efeb6ef0-cac0-4473-a241-9e5f658858fd.png?v=1719430575"
                     className="h-full object-contain md:px-4"
                     alt="tuna cagette restaurant"
                     width={1920}
@@ -147,7 +150,8 @@ export function RestauTabs() {
               <div className="grid grid-cols-1  py-6 md:grid-cols-2 md:px-20 md:py-12">
                 <div className="">
                   <Image
-                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/crie.webp?v=1684977173"
+                    // src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/crie.webp?v=1684977173"
+                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/10.png?v=1719430539"
                     className="h-full object-contain md:px-4"
                     width={1920}
                     height={940}
@@ -156,7 +160,8 @@ export function RestauTabs() {
                 </div>
                 <div className="">
                   <Image
-                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/lacriee.webp?v=1684977172"
+                    // src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/lacriee.webp?v=1684977172"
+                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/11.png?v=1719430318"
                     className="h-full object-contain md:px-4"
                     width={1920}
                     height={940}
@@ -176,7 +181,8 @@ export function RestauTabs() {
               <div className="grid grid-cols-1  py-6 md:grid-cols-2 md:px-20 md:py-12">
                 <div className="">
                   <Image
-                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/bru2.webp?v=1684977332"
+                    // src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/bru2.webp?v=1684977332"
+                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/12.png?v=1719430591"
                     className="h-full object-contain md:px-4"
                     width={1920}
                     height={940}
@@ -185,7 +191,8 @@ export function RestauTabs() {
                 </div>
                 <div className="">
                   <Image
-                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/2.webp?v=1684977332"
+                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/13.png?v=1719430210"
+                    // src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/2.webp?v=1684977332"
                     className="h-full object-contain md:px-4"
                     width={1920}
                     height={940}
