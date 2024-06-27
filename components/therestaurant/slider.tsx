@@ -22,7 +22,7 @@ export function RestauSlider() {
         <SwiperSlide>
           <Image
             // src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/1.jpg?v=1684976776"
-            src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/4_a867edb7-597a-4d04-b75b-7a3600cb3003.png?v=1719430044"
+            src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/04.png?v=1719463519"
             alt="menu"
             className="h-full object-cover"
             width={1920}
