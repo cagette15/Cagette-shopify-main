@@ -26,6 +26,7 @@ type Returns = {
 };
 
 export async function removeFromCart(cartId: string, lineIds: string[]) {
+  console.log("remove cart",lineIds,cartId)
   const res = await shopifyFetch<Returns, Variables>({
     query: QUERY,
     variables: {
@@ -35,5 +36,5 @@ export async function removeFromCart(cartId: string, lineIds: string[]) {
     cache: 'no-store'
   });
 
-  return reshapeCart(res.body.data.cartLinesRemove.cart);
+  return reshapeCart(res?.body?.data?.cartLinesRemove?.cart);
 }

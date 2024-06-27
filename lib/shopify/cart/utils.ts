@@ -3,7 +3,7 @@ import { removeEdgesAndNodes } from 'lib/graphql';
 import { CartFragment } from './fragments';
 
 export const reshapeCart = (cart: CartFragment) => {
-  if (!cart.cost?.totalTaxAmount) {
+  if (!cart?.cost?.totalTaxAmount) {
     cart.cost.totalTaxAmount = {
       amount: '0.0',
       currencyCode: 'USD'
@@ -12,7 +12,7 @@ export const reshapeCart = (cart: CartFragment) => {
 
   return {
     ...cart,
-    lines: removeEdgesAndNodes(cart.lines)
+    lines: removeEdgesAndNodes(cart?.lines)
   };
 };
 

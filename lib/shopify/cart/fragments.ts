@@ -27,6 +27,11 @@ export const cartFragment = /* GraphQL */ `
         currencyCode
       }
     }
+    buyerIdentity{
+        customer{
+            email
+        }
+    }
     lines(first: 100) {
       edges {
         node {

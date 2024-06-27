@@ -1,9 +1,8 @@
 'use client';
-import React, { useEffect, useState } from 'react';
-import { getShopifyToken } from 'lib/next/session';
-import { useForm } from 'react-hook-form';
 import type { CustomerFragment } from 'lib/shopify';
-import { updateCustomer } from 'lib/shopify';
+import { useRouter } from 'next/navigation';
+import React, { useEffect, useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 interface FormValues {
   acceptsMarketing: boolean;
@@ -40,6 +39,7 @@ const AccountUpdateForm: React.FC<AccountUpdateFormProps> = (props) => {
   } = useForm<FormValues>({
     mode: 'onChange'
   });
+  const router = useRouter();
   const { customerInfo } = props;
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -60,6 +60,7 @@ const AccountUpdateForm: React.FC<AccountUpdateFormProps> = (props) => {
     // Check the response and show appropriate message
     if (res.ok) {
       setSuccessMessage('Form submitted successfully!');
+      router.push('/account');
     } else {
       if (res?.status === 400) {
         const data = await res?.json();
