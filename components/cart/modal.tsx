@@ -143,6 +143,20 @@ export default function CartModal({
                       );
                     })}
                   </ul>
+                  <div className=" flex flex-row items-center space-x-4 border-t border-gray-200 py-4">
+                    <div className="w-[100px]">
+                      <Image
+                        className="h-full w-full object-cover"
+                        width={64}
+                        height={64}
+                        alt={'Qr Image'}
+                        src={'/qr.jpeg'}
+                      />
+                    </div>
+                    <div className="flex flex-1 flex-col text-base text-second">
+                      <span className="font-semibold">Thai Qr payment</span>
+                    </div>
+                  </div>
                   <div className="border-t border-gray-200 pt-2 text-sm text-second ">
                     <div className="mb-2 flex items-center justify-between">
                       <p>Subtotal</p>
