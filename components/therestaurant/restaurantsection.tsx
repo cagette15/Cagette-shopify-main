@@ -123,8 +123,9 @@ export function RestauSection() {
               />
               <h4 className="pt-6 text-2xl capitalize text-dark">Fast Delivery</h4>
               <p className="px-4 py-6 text-lg text-gray-700">
-                Order your food and get delivered within 1hr in Bangkok! Delivery the next day in
-                other provinces!
+            Order your food and get delivered within 1hr in bangkok!
+From 11am to 9pm<br></br>
+Delivery the next day in other provinces ( order before noon)
               </p>
             </div>
           </div>
