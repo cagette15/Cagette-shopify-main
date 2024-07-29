@@ -18,7 +18,9 @@ const BlogTiles = ({ article }: { article: Article }) => {
 };
 
 export default async function BlogsPage() {
-  const blogs: Blog[] | null = await getBlogs(10);
+  const blogs: Blog[] | [] = await getBlogs(10);
+
+  const newsBlogs = blogs.find((blog) => blog.handle === 'news') || null;
 
   if (!blogs || blogs.length === 0) notFound();
 
@@ -46,8 +48,8 @@ export default async function BlogsPage() {
           <h1 className="text-2xl font-bold uppercase sm:text-4xl">Articles</h1>
         </div>
         <Grid className="grid-cols-1 px-4 md:px-0 lg:grid-cols-3 ">
-          {blogs.length > 0 && blogs[0].articles.length > 0 ? (
-            blogs[0].articles.map((article) => (
+          {newsBlogs && newsBlogs.articles.length > 0 ? (
+            newsBlogs.articles.map((article) => (
               <article className="border p-2" key={article.title}>
                 <BlogTiles article={article} />
               </article>
