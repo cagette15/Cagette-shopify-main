@@ -6,7 +6,7 @@ export default function HomeSliderPage() {
   return (
     <>
       <div className="w-full bg-black">
-        <div className="bgimg-1 h-[95vh] text-white">
+        <div className="bgimg-1 h-full text-white">
           <div className="container mx-auto flex max-w-6xl items-center justify-center px-6 md:justify-end md:px-0">
             <div className="hidden w-full md:w-1/2"></div>
             <div className="w-full pt-[12vh] md:w-1/2 md:pt-[35vh] lg:pt-[7vh]">
@@ -45,7 +45,7 @@ export default function HomeSliderPage() {
                 >
                   But Cagette is also…
                 </p>
-                <div className="mt-10 text-center">
+                <div className="mt-10 pb-5 text-center">
                   <Link
                     className="focus:ring--[#95112c] mb-2  mr-2 rounded-full bg-second px-5 py-2.5 text-center text-base font-medium uppercase text-white hover:bg-[#95112c] focus:outline-none focus:ring-4"
                     href="/the-restaurant"
@@ -54,7 +54,7 @@ export default function HomeSliderPage() {
                     Restaurant
                   </Link>
                   <Link
-                    className="focus:ring--[#95112c] mb-2  mr-2 rounded-full bg-second px-5 py-3 text-center text-base font-medium uppercase text-white hover:bg-[#95112c] focus:outline-none focus:ring-4"
+                    className="focus:ring--[#95112c] mb-2  mr-2 rounded-full bg-second px-5 py-2.5 text-center text-base font-medium uppercase text-white hover:bg-[#95112c] focus:outline-none focus:ring-4"
                     href="/e-shop"
                     title=""
                   >
@@ -65,7 +65,7 @@ export default function HomeSliderPage() {
             </div>
           </div>
         </div>
-        <div className="bgimg-2 h-[90vh] text-white">
+        <div className="bgimg-2 h-full text-white">
           <div className="container mx-auto flex max-w-7xl items-center justify-center px-6 md:justify-start md:px-0">
             <div className="w-full   pt-[15vh] md:w-1/2 md:pt-[35vh]  lg:pt-[15vh]">
               <div className="p-8 text-left">
@@ -108,7 +108,7 @@ export default function HomeSliderPage() {
           </div>
         </div>
 
-        <div className="bgimg-4 h-[90vh] text-white">
+        <div className="bgimg-4 h-full text-white">
           <div className="container mx-auto flex items-center justify-center px-6 md:max-w-7xl md:justify-end md:px-0">
             {' '}
             <div className="hidden w-full md:w-1/2"></div>
@@ -151,7 +151,7 @@ export default function HomeSliderPage() {
             <div className="hidden w-full md:w-1/2"></div>
           </div>
         </div>
-        <div className="bgimg-3 h-[90vh] text-white">
+        <div className="bgimg-3 h-full text-white">
           <div className="container mx-auto flex max-w-7xl items-center justify-center px-6 md:justify-start md:px-0">
             <div className="w-full   pt-[15vh] md:w-1/2 md:pt-[35vh]  lg:pt-[15vh]">
               <div className="p-8 text-left">
@@ -187,7 +187,7 @@ export default function HomeSliderPage() {
             <div className="hidden w-full md:w-1/2"></div>
           </div>
         </div>
-        <div className="bgimg-5 h-[90vh] text-white">
+        <div className="bgimg-5 h-full text-white">
           <div className="container mx-auto flex max-w-7xl items-center justify-center px-6 md:px-0">
             <div className="w-full   pt-[35vh] md:w-1/2 md:pt-[35vh]  lg:pt-[35vh]">
               <div className="p-8 text-center">

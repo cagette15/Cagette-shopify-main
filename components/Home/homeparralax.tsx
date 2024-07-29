@@ -68,7 +68,7 @@ export function ParallaxComponent() {
                     Restaurant
                   </Link>
                   <Link
-                    className="focus:ring--[#95112c] mb-2  mr-2 rounded-full bg-second px-5 py-3 text-center text-base font-medium uppercase text-white hover:bg-[#95112c] focus:outline-none focus:ring-4"
+                    className="focus:ring--[#95112c] mb-2  mr-2 rounded-full bg-second px-5 py-2.5 text-center text-base font-medium uppercase text-white hover:bg-[#95112c] focus:outline-none focus:ring-4"
                     href="/e-shop"
                     title=""
                   >

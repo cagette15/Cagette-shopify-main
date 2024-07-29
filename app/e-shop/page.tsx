@@ -99,7 +99,7 @@ export default async function EshopPage() {
                   href="/signup"
                   className="w-fit rounded-full bg-cagette px-4 py-2 text-lg font-bold uppercase text-second hover:bg-black hover:text-white md:px-6  md:py-4 md:text-lg"
                 >
-                  Create a Account
+                  Create an Account
                 </Link>
               </div>
             </div>

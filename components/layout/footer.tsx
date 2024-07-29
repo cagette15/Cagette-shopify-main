@@ -44,6 +44,11 @@ export default async function Footer() {
                   Contacts
                 </a>
               </li>
+              <li>
+                <a className="text-gray-100 transition hover:text-gray-100/75" href="/blogs">
+                  Blogs
+                </a>
+              </li>
             </ul>
           </div>
 

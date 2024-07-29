@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 
 import Grid from 'components/grid';
 import Footer from 'components/layout/footer';
