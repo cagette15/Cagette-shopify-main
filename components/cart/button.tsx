@@ -53,9 +53,9 @@ export default function CartButton({
           
           const vfWidget = document.querySelector('#voiceflow-chat');
           if (vfWidget && vfWidget.shadowRoot) {
-            const reqDiv = vfWidget.shadowRoot.querySelector('.vfrc-widget--launcher.c-PJLV')
+            const reqDiv = vfWidget.shadowRoot.querySelector('.vfrc-widget--launcher.c-PJLV') as HTMLElement;
             reqDiv.style.left = '';
-            const reqDiv2 = vfWidget.shadowRoot.querySelector('.vfrc-widget--chat.c-fikloo')
+            const reqDiv2 = vfWidget.shadowRoot.querySelector('.vfrc-widget--chat.c-fikloo') as HTMLElement;
             reqDiv2.style.left = '';
           }
           setCartIsOpen(false)
@@ -68,13 +68,13 @@ export default function CartButton({
         onClick={() => {
           const vfWidget = document.querySelector('#voiceflow-chat');
           if (vfWidget && vfWidget.shadowRoot) {
-            const reqDiv = vfWidget.shadowRoot.querySelector('.vfrc-widget--launcher.c-PJLV')
+            const reqDiv = vfWidget.shadowRoot.querySelector('.vfrc-widget--launcher.c-PJLV') as HTMLElement;
             reqDiv.style.left = '24px';
-            const reqDiv2 = vfWidget.shadowRoot.querySelector('.vfrc-widget--chat.c-fikloo')
+            const reqDiv2 = vfWidget.shadowRoot.querySelector('.vfrc-widget--chat.c-fikloo') as HTMLElement;
             reqDiv2.style.left = '24px';
             setTimeout(() => {
-              window?.voiceflow?.chat.open();
-              window?.voiceflow?.chat.interact({
+              (window as any).voiceflow?.chat.open();
+              (window as any).voiceflow?.chat.interact({
                 type: "launch",
                 payload: { url: 'https://www.cagettebkk.com/cart' }
               });
