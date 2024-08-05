@@ -2,13 +2,13 @@
 
 import { usePathname } from 'next/navigation';
 import Script from 'next/script';
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 
-const autoPopList = ['/search/', '/delicatessen-shop', '/the-restaurant']
+const autoPopList:string[] = ['/search/', '/delicatessen-shop', '/the-restaurant']
 
 
-const getPathname = (pathname) => {
+const getPathname = (pathname:string):string => {
   
 
   if (pathname == '/search/promotions') {
@@ -33,24 +33,24 @@ const getPathname = (pathname) => {
 
 
 
-const VoiceflowScript = () => {
+const VoiceflowScript: React.FC = () => {
 
-  const [isVoiceflowLoaded, setIsVoiceflowLoaded] = useState(false);
+  const [isVoiceflowLoaded, setIsVoiceflowLoaded] = useState<boolean>(false);
 
   const pathname = usePathname();
 
-  const vfWidgetRef = useRef();
-  const vfLauncherRef = useRef();
-  const isFirstTime = useRef(true);
-  const isOneTimeOpened = useRef(false);
-  const isEventsAttached = useRef(false);
-  const isSamePath = useRef(false);
-  const currentPathname = useRef(pathname);
+  const vfWidgetRef = useRef<HTMLElement | null>(null);
+  const vfLauncherRef = useRef<HTMLElement | null>(null);
+  const isFirstTime = useRef<boolean>(true);
+  const isOneTimeOpened = useRef<boolean>(false);
+  const isEventsAttached = useRef<boolean>(false);
+  const isSamePath = useRef<boolean>(false);
+  const currentPathname = useRef<string>(pathname);
 
 
 
 
-  const addVibrateEffect = () => {
+  const addVibrateEffect = (): void => {
     const style = document.createElement('style');
     style.textContent = `
       @keyframes vibrate {
@@ -63,21 +63,21 @@ const VoiceflowScript = () => {
         animation: vibrate 0.3s linear 10;
       }
     `;
-    vfWidgetRef.current.shadowRoot.appendChild(style);
-    vfLauncherRef.current.classList.add('vibrate');
+    vfWidgetRef.current?.shadowRoot?.appendChild(style);
+    vfLauncherRef.current?.classList?.add('vibrate');
   }
 
 
 
-  const attachCloseEvent = () => {
+  const attachCloseEvent = (): void => {
 
     if (!isEventsAttached.current) {
       if (vfWidgetRef.current && vfWidgetRef.current.shadowRoot) {
         const header_Button_Minimzed = vfWidgetRef.current.shadowRoot.querySelectorAll('.vfrc-header--button');
-        header_Button_Minimzed[1].addEventListener('click', () => {
-          const buttonFound = vfWidgetRef.current.shadowRoot.querySelector('.vfrc-prompt .vfrc-button');
+        header_Button_Minimzed[1]?.addEventListener('click', () => {
+          const buttonFound = vfWidgetRef.current?.shadowRoot?.querySelector('.vfrc-prompt .vfrc-button');
           if (!isEventsAttached.current) {
-            buttonFound.addEventListener('click', () => {
+            buttonFound?.addEventListener('click', () => {
               isOneTimeOpened.current = false;
               isEventsAttached.current = true;
               loadVoiceflow()
@@ -89,9 +89,9 @@ const VoiceflowScript = () => {
 
   }
 
-  const loadVoiceflow = async () => {
-    await window.voiceflow.chat.destroy();
-    await window.voiceflow.chat.load({
+  const loadVoiceflow = async (): Promise<void> => {
+    await (window as any).voiceflow.chat.destroy();
+    await (window as any).voiceflow.chat.load({
       verify: { projectID: '66ac93401c1a38b862ae80f4' },
       url: 'https://general-runtime.voiceflow.com',
       versionID: 'production',
@@ -122,7 +122,7 @@ const VoiceflowScript = () => {
 
 
 
-  const interactHandler = async (pathname, wait) => {
+  const interactHandler = async (pathname: string, wait: boolean) => {
 
 
 
@@ -141,7 +141,7 @@ const VoiceflowScript = () => {
       if (isSamePath.current || pathname != currentPathname.current) {
         return;
       }
-      await window.voiceflow?.chat?.open();
+      await (window as any).voiceflow?.chat?.open();
     }
     // }
 
@@ -152,7 +152,7 @@ const VoiceflowScript = () => {
 
     if (isOneTimeOpened.current) {
       
-      window.voiceflow.chat.interact({
+      (window as any).voiceflow.chat.interact({
         type: "launch",
         payload: { url: `https://www.cagettebkk.com${pathname}` }
       });
@@ -164,7 +164,7 @@ const VoiceflowScript = () => {
 
 
 
-  const voiceflowButtonClickHandler = async () => {
+  const voiceflowButtonClickHandler = async (): Promise<void> => {
 
     if (isOneTimeOpened.current && !isSamePath.current) {
 
@@ -177,12 +177,12 @@ const VoiceflowScript = () => {
       }
 
       if (isIncluded) {
-        interactHandler(currentPathname.current);
+        interactHandler(currentPathname.current, false);
       } else {
-        interactHandler('/default');
+        interactHandler('/default', false);
       }
     } else {
-      await window.voiceflow?.chat?.open();
+      await (window as any).voiceflow?.chat?.open();
       attachCloseEvent();
     }
 
@@ -194,14 +194,14 @@ const VoiceflowScript = () => {
   useEffect(() => {
 
 
-    let checkVoiceflowLoadedInterval;
+    let checkVoiceflowLoadedInterval:NodeJS.Timeout;
 
     (async () => {
 
       if (!isOneTimeOpened.current && !isFirstTime.current) {
         await loadVoiceflow();
       } else {
-        await window.voiceflow?.chat?.close();
+        await (window as any).voiceflow?.chat?.close();
       }
 
       if (isVoiceflowLoaded) {
