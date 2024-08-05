@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/react';
+// import VoiceflowScript from 'components/VoiceflowScript';
 import Navbar from 'components/layout/navbar';
 import { Rubik } from 'next/font/google';
 import Script from 'next/script';
@@ -15,8 +16,9 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   return (
     <html lang="en" className={rubik.variable}>
     
+    {/* <VoiceflowScript /> */}
     <Script
-        strategy="afterInteractive"
+        strategy='afterInteractive'
         src={`https://www.googletagmanager.com/gtag/js?id=${GTM_ID}`}
         async
       ></Script>
