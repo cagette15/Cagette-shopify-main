@@ -47,11 +47,40 @@ export default function CartButton({
 
   return (
     <>
-      <CartModal isOpen={cartIsOpen} onClose={() => setCartIsOpen(false)} cart={cart} />
+      <CartModal
+        isOpen={cartIsOpen}
+        onClose={() => {
+          
+          const vfWidget = document.querySelector('#voiceflow-chat');
+          if (vfWidget && vfWidget.shadowRoot) {
+            const reqDiv = vfWidget.shadowRoot.querySelector('.vfrc-widget--launcher.c-PJLV')
+            reqDiv.style.left = '';
+            const reqDiv2 = vfWidget.shadowRoot.querySelector('.vfrc-widget--chat.c-fikloo')
+            reqDiv2.style.left = '';
+          }
+          setCartIsOpen(false)
+        }}
+        cart={cart}
+      />
 
       <button
         aria-label="Open cart"
         onClick={() => {
+          const vfWidget = document.querySelector('#voiceflow-chat');
+          if (vfWidget && vfWidget.shadowRoot) {
+            const reqDiv = vfWidget.shadowRoot.querySelector('.vfrc-widget--launcher.c-PJLV')
+            reqDiv.style.left = '24px';
+            const reqDiv2 = vfWidget.shadowRoot.querySelector('.vfrc-widget--chat.c-fikloo')
+            reqDiv2.style.left = '24px';
+            setTimeout(() => {
+              window?.voiceflow?.chat.open();
+              window?.voiceflow?.chat.interact({
+                type: "launch",
+                payload: { url: 'https://www.cagettebkk.com/cart' }
+              });
+            }, 2000)
+          }
+
           setCartIsOpen(true);
         }}
         className="relative right-0 top-0"
