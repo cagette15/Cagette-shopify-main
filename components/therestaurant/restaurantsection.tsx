@@ -125,7 +125,7 @@ export function RestauSection() {
               <p className="px-[42px] py-6 text-lg text-gray-700">
             Order your food and get delivered within 1hr in bangkok!
 From 11am to 9pm<br></br>
-Delivery the next day in other provinces ( order before noon)
+Delivery the next day in other provinces (order before noon)
               </p>
             </div>
           </div>
