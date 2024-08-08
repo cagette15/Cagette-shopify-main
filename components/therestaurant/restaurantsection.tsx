@@ -77,7 +77,7 @@ export function RestauSection() {
                 alt=""
               />
               <h4 className="text-2xl capitalize text-dark">Friendly Service</h4>
-              <p className="px-4 py-6 text-lg text-gray-700">
+              <p className="px-8 py-6 text-lg text-gray-700">
                 An international dedicated team, working with passion and a true French «
                 Savoir-Faire ».
               </p>
