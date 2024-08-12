@@ -101,7 +101,7 @@ export function RestauTabs() {
                 <div className="">
                   <Image
                     // src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/LUNCH-MENU_MAY_2.webp?v=1684922023"
-                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/lauch2.jpg?v=1722231781"
+                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/new.jpg?v=1722841001"
                     className="h-full object-contain md:px-4"
                     width={1920}
                     height={940}
