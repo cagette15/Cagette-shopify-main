@@ -25,7 +25,8 @@ export default async function HomePage() {
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
-        <meta name="google-site-verification" content="jU4az3_HFc7JcxHtJ18OR_Jt1HrIMtRVFQgCoxPespc" />
+       <meta name="google-site-verification" content="Zh42mpI4SItxLPU-smBCP_qMcT73IG27g9NA2kgIeMU" />
+        <meta name="google-site-verification" content="jU4az3_HFc7JcxHtJ18OR_Jt1HrIMtRVFQgCoxPespc" />
 
       </Head>
       <HomeSliderPage />
