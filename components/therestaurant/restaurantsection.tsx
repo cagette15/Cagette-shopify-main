@@ -106,6 +106,7 @@ export function RestauSection() {
                 className="h-32 w-32"
                 alt=""
               />
+             {/* H4 heading */}
               <h4 className="pt-6 text-2xl capitalize text-dark">Free Parking Lot</h4>
               <p className="px-4 py-6 text-lg text-gray-700">
                 We have 15 parking lots at Cagette and valets service to assist you and watch out
