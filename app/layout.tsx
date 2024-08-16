@@ -4,6 +4,7 @@ import Navbar from 'components/layout/navbar';
 import { Rubik } from 'next/font/google';
 import Script from 'next/script';
 import { ReactNode, Suspense } from 'react';
+import Head from 'next/head';
 import './globals.css';
 const GTM_ID = ' G-R8TGB8XP4D';
 const rubik = Rubik({
@@ -15,7 +16,10 @@ const rubik = Rubik({
 export default async function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={rubik.variable}>
-    
+     <Head>
+       <meta name="google-site-verification" content="Zh42mpI4SItxLPU-smBCP_qMcT73IG27g9NA2kgIeMU" />
+       <meta name="google-site-verification" content="jU4az3_HFc7JcxHtJ18OR_Jt1HrIMtRVFQgCoxPespc" />
+      </Head>
     <VoiceflowScript />
     <Script
         strategy='afterInteractive'
