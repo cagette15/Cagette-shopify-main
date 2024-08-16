@@ -9,7 +9,7 @@ export function RestauTabs() {
       <div className="section2restau bg-dark/40 py-12 md:py-20">
         <div className="container mx-auto text-center">
           <h1 className="pt-[32vh] text-center text-3xl font-bold text-white  drop-shadow-[0_35px_35px_rgba(0,0,0,0.65)] md:pt-[12vh] md:text-6xl ">
-          The Restaurant 
+          The Restaurant
           </h1>
           <p className="g px-14 pt-[5vh] text-center  text-lg text-white drop-shadow-[35px_35px_35px_rgba(0,0,0,0.65)] md:text-2xl">
             Indulge yourself in the spirit of a Parisian bistro with a natural scenery! <br />

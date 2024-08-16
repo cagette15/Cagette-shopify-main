@@ -5,6 +5,9 @@ import { sorting } from 'lib/constants';
 import { Suspense } from 'react';
 
 export default function SearchLayout({ children }: { children: React.ReactNode }) {
+
+  
+
   return (
     <Suspense>
       <div className="container mx-auto flex flex-col bg-white py-6 text-black   md:flex-row">
