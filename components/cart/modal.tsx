@@ -37,7 +37,7 @@ export default function CartModal({
           static
           open={isOpen}
           onClose={onClose}
-          className="relative z-50"
+          className="mb-checkoutBtn relative z-50"
         >
           <motion.div
             variants={{

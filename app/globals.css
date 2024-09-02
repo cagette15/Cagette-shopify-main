@@ -254,3 +254,13 @@ a {
     min-height: 90vh;
   }
 }
+
+/* @media (max-width: 768px) {
+  .mb-checkoutBtn {
+    z-index: 10000;
+  }
+} */
+
+.mb-checkoutBtn {
+  z-index: 10001;
+}
