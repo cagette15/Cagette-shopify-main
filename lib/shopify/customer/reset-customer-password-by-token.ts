@@ -22,7 +22,7 @@ type Variables = {
   id: string;
   input: {
     password: string;
-    urlToken: string;
+    resetToken: string;
   };
 };
 
@@ -36,7 +36,7 @@ type Returns = {
 export async function resetCustomerPasswordByToken(
   customerId: string,
   password: string,
-  urlToken: string
+  resetToken: string
 ) {
   const res = await shopifyFetch<Returns, Variables>({
     query: QUERY,
@@ -44,7 +44,7 @@ export async function resetCustomerPasswordByToken(
       id: customerId,
       input: {
         password,
-        urlToken
+        resetToken
       }
     }
   });

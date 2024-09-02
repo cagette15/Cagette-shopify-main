@@ -13,10 +13,15 @@ export default async function AccountPage() {
 
   const customerInfo = await getCustomer(accessToken);
 
+  if (!customerInfo) {
+    localStorage.setItem('userData', '');
+    redirect('/');
+  }
+
   return (
     <main>
       {/* <AccountUpdateForm customerInfo={customerInfo!} /> */}
-      <CustomerAccountDetails  customerInfos={customerInfo!} />
+      <CustomerAccountDetails customerInfos={customerInfo!} />
       {/*<h1>server side</h1>
       <pre title="debug">
         <code>{JSON.stringify({ customerInfos }, null, 2)}</code>

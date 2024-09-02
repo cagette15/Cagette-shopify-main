@@ -1,9 +1,9 @@
 'use client';
 
 import type { RecoverPasswordEndpoint } from 'app/api/accounts/recover-password/route';
-
 import { submit } from 'lib/react/submit';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FormEvent, useState } from 'react';
 
 export default function RecoverPage() {
@@ -125,6 +125,11 @@ export default function RecoverPage() {
               >
                 Submit
               </button>
+              <div className="flex justify-center px-4 py-2  font-medium text-gray-100 hover:text-[#95112c] md:text-gray-600">
+                <div>
+                  <Link href="/account">Profile</Link>
+                </div>
+              </div>
             </div>
 
             <div className="left-0 right-0 mt-16 flex justify-center space-x-4 p-4 text-center lg:hidden ">

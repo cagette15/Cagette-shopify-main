@@ -129,6 +129,17 @@ export default function MobileMenu({ menu }: { menu: SimpleMenuItem[] }) {
                       <li>
                         <Link
                           className="rounded-lg py-1 text-xl capitalize text-black transition-colors hover:text-gray-500"
+                          href="/signin"
+                          onClick={() => {
+                            setMobileMenuIsOpen(false);
+                          }}
+                        >
+                          Profile
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          className="rounded-lg py-1 text-xl capitalize text-black transition-colors hover:text-gray-500"
                           href="/the-restaurant"
                           onClick={() => {
                             setMobileMenuIsOpen(false);

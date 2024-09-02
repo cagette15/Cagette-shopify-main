@@ -112,7 +112,11 @@ export default function ResetPasswordPage({ params }: ResetPasswordPageParams) {
             onSubmit={onSubmit}
             className="mx-auto w-full px-4 sm:w-2/3 lg:px-0"
           >
-            <input type="hidden" name="customerId" value={params.customerId} />
+            <input
+              type="hidden"
+              name="customerId"
+              value={`gid://shopify/Customer/${params.customerId}`}
+            />
             <input type="hidden" name="urlToken" value={params.urlToken} />
             <div className="pb-2 pt-4">
               <input

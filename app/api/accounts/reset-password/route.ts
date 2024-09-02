@@ -4,9 +4,9 @@ import { resetCustomerPasswordByToken } from 'lib/shopify';
 export type ResetPasswordEndpoint = ApiResponse<typeof POST>;
 
 export const POST = endpoint(async (req) => {
-  const { customerId, password, urlToken } = await req.json();
+  const { customerId, password, urlToken: resetToken } = await req.json();
 
-  const res = await resetCustomerPasswordByToken(customerId, password, urlToken);
+  const res = await resetCustomerPasswordByToken(customerId, password, resetToken);
 
   if (res.customerUserErrors.length) {
     return {

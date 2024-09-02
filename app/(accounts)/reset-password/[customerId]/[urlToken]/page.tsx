@@ -3,18 +3,19 @@
 import type { RecoverPasswordEndpoint } from 'app/api/accounts/recover-password/route';
 import { submit } from 'lib/react/submit';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { FormEvent, useState } from 'react';
 
-export default function ResetPage() {
+type ResetPasswordPageParams = {
+  params: {
+    customerId: string;
+    urlToken: string;
+  };
+};
+
+export default function ResetPasswordPage({ params }: ResetPasswordPageParams) {
   const router = useRouter();
   const [error, setError] = useState<string | undefined>();
-
-  // password recover by email to redirect recover-password
-  // if(!error)
-  // redirect('recover-password')
-
   async function onSubmit(ev: FormEvent<HTMLFormElement>) {
     ev.preventDefault();
 
@@ -118,6 +119,12 @@ export default function ResetPage() {
             onSubmit={onSubmit}
             className="mx-auto w-full px-4 sm:w-2/3 lg:px-0"
           >
+            <input
+              type="hidden"
+              name="customerId"
+              value={`gid://shopify/Customer/${params.customerId}`}
+            />
+            <input type="hidden" name="urlToken" value={params.urlToken} />
             <div className="pb-2 pt-4">
               <input
                 type="password"
@@ -136,14 +143,6 @@ export default function ResetPage() {
                 className="block w-full rounded-sm bg-gray-200 p-4  text-lg text-gray-800"
                 placeholder="Password Confirmation"
               />
-            </div>
-            <div className="flex justify-between px-4 py-2  font-medium text-gray-100 hover:text-[#95112c] md:text-gray-600">
-              <div>
-                <Link href="/signup">Sign Up</Link>
-              </div>
-              <div>
-                <Link href="/signin">Login</Link>
-              </div>
             </div>
             <div className="px-4 pb-2 pt-4">
               <button

@@ -1,9 +1,8 @@
 import { getShopifyToken } from 'lib/next/session';
 import { redirect } from 'next/navigation';
+import SignIn from './customer-sign';
 
-import Signin from './customer-sign';
-
-export default async function SigninPage() {
+export default function SignInPage() {
   const accessToken = getShopifyToken();
 
   if (accessToken) {
@@ -12,7 +11,7 @@ export default async function SigninPage() {
 
   return (
     <main>
-      <Signin />
+      <SignIn />
     </main>
   );
 }
