@@ -4,7 +4,7 @@ import { isShopifyError } from 'lib/type-guards';
 const STOREFRONT_API_VERSION = '2023-01';
 
 export function getStoreDomain() {
-  return `https://${process.env.SHOPIFY_STORE_DOMAIN!}`;
+  return `https://cagette-bangkok.myshopify.com`;
 }
 
 export function getStorefrontApiUrl() {
@@ -12,7 +12,7 @@ export function getStorefrontApiUrl() {
 }
 
 export function getPrivateTokenHeaders() {
-  return { 'X-Shopify-Storefront-Access-Token': process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN! };
+  return { 'X-Shopify-Storefront-Access-Token': '7e7a672b261eddbab58a5ef3143e3e99' };
 }
 
 type ShopifyFetchParameters<Variables extends any> = {
