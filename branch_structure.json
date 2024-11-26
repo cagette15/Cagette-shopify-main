@@ -1,0 +1,18 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "Link_issues",
+    "chatbot",
+    "main"
+  ],
+  "parent": {
+    "Link_issues": "main",
+    "chatbot": "main",
+    "main": null
+  },
+  "order": [
+    "main",
+    "Link_issues",
+    "chatbot"
+  ]
+}
