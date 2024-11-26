@@ -24,20 +24,22 @@ export default function EshopSliderOne() {
         modules={[Autoplay]}
       >
         <SwiperSlide>
-          <div className="h-[35vh] w-full  bg-[url('https://cdn.shopify.com/s/files/1/0762/8763/9861/files/5.webp?v=1686638234')] bg-cover bg-center lg:min-h-[55vh] ">
+          <div className="h-[35vh] w-full  bg-[url('https://cdn.shopify.com/s/files/1/0762/8763/9861/files/Heading_1.jpg?v=1732621968')] bg-cover bg-center lg:min-h-[55vh] ">
             <div className="justify-left flex h-full w-full items-center bg-black bg-opacity-50">
               <div className="container  text-center text-white">
                 <h3 className="text-3xl font-bold text-white drop-shadow-[0_35px_35px_rgba(0,0,0,0.65)] md:text-5xl">
-                  ENJOY 20% OFF
+                  CHRISTMAS DELICACIES
                 </h3>
                 <h2 className="text-3xl font-bold text-white drop-shadow-[0_35px_35px_rgba(0,0,0,0.65)] md:text-5xl">
-                  On your 1st order!
+                  Available now!
                 </h2>
                 <h6 className="py-2 text-lg text-white drop-shadow-[35px_35px_35px_rgba(0,0,0,0.65)] md:text-2xl">
-                  Create your account & get 20% discount on your final order! <br /> <br />
-                  <span className="w-fit rounded-full bg-second px-4 py-2 text-lg font-bold text-white drop-shadow-[35px_35px_35px_rgba(0,0,0,0.65)] md:text-lg">
-                    CODE: WELCOME20
-                  </span>
+                  Discover our offers for the festivities... <br /> <br />
+                  <Link href="search/christmas">
+                    <span className="w-fit rounded-full bg-second px-4 py-2 text-lg font-bold text-white drop-shadow-[35px_35px_35px_rgba(0,0,0,0.65)] md:text-lg">
+                      Shop Here
+                    </span>
+                  </Link>
                 </h6>
               </div>
             </div>
