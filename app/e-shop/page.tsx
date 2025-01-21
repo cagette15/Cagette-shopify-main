@@ -37,7 +37,7 @@ export default async function EshopPage() {
         <p className="mt-4 px-4 py-2 text-xl text-gray-700 md:px-6 md:py-4">
 Our Chefs prepared everything you need to celebrate.
           <br />
-         Christmas & New Year festivities.
+         Monthly Chef's Selection at a Friendly Price.
         </p>
         <div className="pt-6 md:pt-14">
           <Suspense>
