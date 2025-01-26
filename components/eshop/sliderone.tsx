@@ -47,7 +47,7 @@ Over 40 cheeses imported weekly from France<br /> <br />
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="h-[35vh]  w-full bg-[url('https://cdn.shopify.com/s/files/1/0762/8763/9861/files/3.webp?v=1686638234')] bg-cover  bg-center lg:min-h-[55vh]">
+          <div className="h-[35vh]  w-full bg-[url('https://cdn.shopify.com/s/files/1/0762/8763/9861/files/2_0a554f82-76b8-4ee1-a11e-bf6f9062ef04.png?v=1737878664')] bg-cover  bg-center lg:min-h-[55vh]">
             <div className="justify-left flex h-full w-full items-center bg-black bg-opacity-50">
               <div className="container text-center text-white">
                 <h3 className="text-3xl font-bold text-white drop-shadow-[0_35px_35px_rgba(0,0,0,0.65)] md:text-5xl">
