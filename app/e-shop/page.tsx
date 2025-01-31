@@ -35,7 +35,7 @@ export default async function EshopPage() {
         <h2 className="text-2xl font-bold uppercase text-second md:text-4xl">HOT DEALS</h2>
 
         <p className="mt-4 px-4 py-2 text-xl text-gray-700 md:px-6 md:py-4">
-Our Chefs prepared everything you need to celebrate.
+{/* Our Chefs prepared everything you need to celebrate. */}
           <br />
          Monthly Chef's Selection at a Friendly Price.
         </p>
