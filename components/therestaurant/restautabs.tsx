@@ -91,7 +91,7 @@ export function RestauTabs() {
                 <div className="">
                   <Image
                     // src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/sl.webp?v=1684922024"
-                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/WhatsApp_Image_2025-01-13_at_13.02.44.jpg?v=1736760062"
+                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/1_ef6d3a9b-c3c9-4acf-b377-6e20dac39948.png?v=1719430584"
                     className="h-full object-contain md:px-4"
                     width={1920}
                     height={940}
@@ -101,7 +101,7 @@ export function RestauTabs() {
                 <div className="">
                   <Image
                     // src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/LUNCH-MENU_MAY_2.webp?v=1684922023"
-                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/sundayBrunch.jpg?v=1738319532"
+                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/WhatsApp_Image_2025-01-13_at_13.02.44.jpg?v=1736760062"
                     className="h-full object-contain md:px-4"
                     width={1920}
                     height={940}
@@ -181,8 +181,8 @@ export function RestauTabs() {
               <div className="grid grid-cols-1  py-6 md:grid-cols-2 md:px-20 md:py-12">
                 <div className="">
                   <Image
-                    // src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/bru2.webp?v=1684977332"
-                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/sundayBrunch.jpg?v=1738319532"
+                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/12.png?v=1719430591"
+                    // src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/sundayBrunch.jpg?v=1738319532"
                     className="h-full object-contain md:px-4"
                     width={1920}
                     height={940}
@@ -191,7 +191,7 @@ export function RestauTabs() {
                 </div>
                 <div className="">
                   <Image
-                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/13.png?v=1719430210"
+                    src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/sundayBrunch.jpg?v=1738319532"
                     // src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/2.webp?v=1684977332"
                     className="h-full object-contain md:px-4"
                     width={1920}
