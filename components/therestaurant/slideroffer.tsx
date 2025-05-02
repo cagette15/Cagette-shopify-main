@@ -40,7 +40,7 @@ export function RestauSliderOffer() {
         <SwiperSlide>
           <Image
             // src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/Monday.webp?v=1684981095"
-            src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/1_03d38fb2-c953-464a-99bb-241e5fe58d27.png?v=1736246419"
+             src="https://cdn.shopify.com/s/files/1/0762/8763/9861/files/DAILY_SPECIALS.png?v=1745988414"
             alt="monday menu"
             className="w-full object-cover"
             width={1080}
