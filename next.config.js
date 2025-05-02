@@ -14,7 +14,6 @@ module.exports = {
       headers.push({
         source: '/:path*',
 
-
       });
     }
     return headers;
@@ -36,7 +35,6 @@ module.exports = {
         destination: '/products/anchovies-in-oil',
         permanent: true,
       },
-
 
       {
         source: '/products/avocado-pc',
@@ -568,7 +566,6 @@ module.exports = {
         destination: '/products/le-nicois-sandwich',
         permanent: true,
       },
-
 
       {
         source: '/products/laguiole-aop-100g',
